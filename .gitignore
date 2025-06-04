@@ -1,0 +1,43 @@
+# Crear/actualizar .gitignore en la raíz del proyecto
+cat > .gitignore << 'EOF'
+# Dependencies
+node_modules/
+package-lock.json
+
+# Environment variables
+.env
+.env.*
+
+# Firebase credentials - MUY IMPORTANTE
+*.json
+!package.json
+!tsconfig.json
+!nuxt.config.json
+backend-pfinal/credentials/
+backend-pfinal/*firebase*.json
+backend-pfinal/serviceAccountKey.json
+
+# Nuxt
+.nuxt/
+.nitro/
+.cache/
+.output/
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Build
+dist/
+build/
+EOF
